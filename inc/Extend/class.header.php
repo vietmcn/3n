@@ -9,11 +9,16 @@ if ( ! class_exists( 'n_Extend_header' ) ) :
         
         public static function logo( $att )
         {
-            
+            if ( is_home() || is_front_page() ) {
+                $h1 = 'h1';
+            } else {
+                $h1 = 'h2';
+            }
+            $out = '<'.$h1.' id="n_Extend_logo">';
+            $out .= '<img src="'.$att['link'].'" alt="'.$att['title'].'"/>';
+            $out .= '</'.$h1.'>';
+            echo $out;
         }
     }
-    
-    
 endif;
-
-new n_Extend_header;
+$n_Extend_header = new n_Extend_header;

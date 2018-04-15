@@ -1,4 +1,4 @@
 <?php 
-wp_head();
+get_header();
 do_action('3n_index');
-wp_footer();
+get_footer();

@@ -20,4 +20,5 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header data-id=""><?php do_action('3n_header');?></header>
+<main id="n_Extend_content">
+<header data-id="n_Exten_header" class="flex"><?php do_action('3n_header');?></header>
