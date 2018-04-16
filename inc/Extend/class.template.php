@@ -2,8 +2,8 @@
 if ( !defined( 'ABSPATH' ) ) :
     exit;
 endif;
-if ( ! class_exists( 'n_Extend_header' ) ) :
-    class n_Extend_header
+if ( ! class_exists( 'n_Extend_template' ) ) :
+    class n_Extend_template
     {
         protected $att = array();
         
@@ -30,6 +30,17 @@ if ( ! class_exists( 'n_Extend_header' ) ) :
                 return $out;
             }
         }
+        public function footer( $att )
+        {
+            $out .= '<figure id="n-Extend-footer-logo">';
+            $out .= '<a href="'.$att['link'].'" title="'.$att['title'].'"><img src="'.$att['logo'].'" alt="'.$att['title'].'" /></a>';
+            $out .= '<figcaption><strong>Tạo sự khác biệt cho thường hiệu của bạn.</figcaption>';
+            $out .= '<a href="'.$att['socail']['facebook'].'"><i class="ion-social-facebook"></i></a>';
+            $out .= '<a href="'.$att['socail']['tw'].'"><i class="ion-social-twitter"></i></a>';
+            $out .= '<a href="'.$att['socail']['youtube'].'"><i class="ion-social-youtube"></i></a>';
+            $out .= '</figure>';
+            echo $out;
+        }
     }
 endif;
-$n_Extend_header = new n_Extend_header;
+$Extend_template = new n_Extend_template;

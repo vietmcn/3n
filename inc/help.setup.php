@@ -70,7 +70,8 @@ add_action( 'wp_enqueue_scripts', function() {
 	global $n_ver;
 	
 	// Theme stylesheet.
-	wp_enqueue_style( '3n-style', get_stylesheet_uri() );
+	wp_enqueue_style( '3n-style', get_theme_file_uri( '/style.css' ), '', $n_ver, 'all' );
+	wp_enqueue_style( '3n-icon', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', '', '2.0.1', 'all' );
 	// Check Deivce
 	if ( wp_is_mobile() ) {
 
