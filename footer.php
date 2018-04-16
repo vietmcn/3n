@@ -11,4 +11,4 @@
  * @since 1.0
  * @version 1.0
  */
-?></main><?php wp_footer();?></body></html>
+?></main></div><?php wp_footer();?></body></html>

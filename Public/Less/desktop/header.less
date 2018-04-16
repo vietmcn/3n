@@ -1,12 +1,46 @@
 // main: ../desktop.less
-[data-id="n_Exten_header"] {
+[data-id="n_Extend_header"] {
     min-height: 55px;
     align-items: center;
     padding: 0 10px;
     #n_Extend_logo {
         img {
-            width: 20px;
-            height: 20px;
+            width: 50px;
+            height: 50px;
         }
     }
+    .n-Extend-menu-header {
+        width: 100%;
+        display: flex;
+        display: -webkit-flex;
+        #menu-menu-header {
+            display: flex;
+            display: -webkit-flex;
+            justify-content: flex-end;
+            width: 100%;
+            li {
+                list-style: none;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 700;
+                padding: 10px;
+                a {
+                    text-decoration: none;
+                    padding-bottom: 5px;
+                }
+            }
+            li.current-menu-item  {
+                a {
+                    border-bottom: 3px solid red;
+                }
+            }
+        }
+    }
+}
+#n_Extend_banner {
+    background-image: url('http://job.co/wp-content/uploads/2018/04/banner-01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 800px;
 }

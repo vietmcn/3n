@@ -48,7 +48,20 @@ add_action( 'after_setup_theme', function() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-
+	/*
+	 * Custom Logo
+	 * 
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+	add_theme_support( 'custom-logo' );
+	/*
+	 * Menu
+	 * 
+	 * @link 
+	 */
+	register_nav_menus( array(
+		'menu_header'    => __( 'Menu Hedaer', '3N' ),
+	) );
 } );
 
 //Reg Script
