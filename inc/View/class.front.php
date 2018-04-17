@@ -2,8 +2,8 @@
 if ( !defined( 'ABSPATH' ) ) :
     exit;
 endif;
-if ( ! class_exists( 'n_Extend_template' ) ) :
-    class n_Extend_template
+if ( ! class_exists( 'n_View_template' ) ) :
+    class n_View_template
     {
         protected $att = array();
         
@@ -14,7 +14,7 @@ if ( ! class_exists( 'n_Extend_template' ) ) :
             } else {
                 $h1 = 'h2';
             }
-            $out = '<'.$h1.' id="n_Extend_logo">';
+            $out = '<'.$h1.' id="n_View_logo">';
             $out .= '<img src="'.$att['link'].'" alt="'.$att['title'].'"/>';
             $out .= '</'.$h1.'>';
             echo $out;
@@ -32,7 +32,7 @@ if ( ! class_exists( 'n_Extend_template' ) ) :
         }
         public function footer( $att )
         {
-            $out .= '<figure id="n-Extend-footer-logo">';
+            $out  = '<figure id="n-View-footer-logo">';
             $out .= '<a href="'.$att['link'].'" title="'.$att['title'].'"><img src="'.$att['logo'].'" alt="'.$att['title'].'" /></a>';
             $out .= '<figcaption><strong>Tạo sự khác biệt cho thường hiệu của bạn.</figcaption>';
             $out .= '<a href="'.$att['socail']['facebook'].'"><i class="ion-social-facebook"></i></a>';
@@ -41,6 +41,17 @@ if ( ! class_exists( 'n_Extend_template' ) ) :
             $out .= '</figure>';
             echo $out;
         }
+        public function contact( $att ) 
+        {
+            if ( $att['position'] == 'footer' ) {
+                $out  = '<aside id="n-View-contact">';
+                $out .= '<p><span>'.$att['time_work']['name'].'</span>'.$att['time_work']['time']['start'].' - '.$att['time_work']['time']['off'].'</p>';
+                $out .= '<aside>';
+            } else {
+                $out .= 'NONE';
+            }
+            echo $out;
+        }
     }
 endif;
-$Extend_template = new n_Extend_template;
+$View_template = new n_View_template;

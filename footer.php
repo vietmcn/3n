@@ -11,4 +11,4 @@
  * @since 1.0
  * @version 1.0
  */
-?><footer data-id="n-Extend-footer" id="footer" class="hello World"><div class="n_Extend_container"><?php do_action('3n_footer');?></div></footer></main></div><?php wp_footer();?></body></html>
+?><footer data-id="n-View-footer" id="footer" class="hello World"><div class="n_View_container"><?php do_action('3n_footer');?></div></footer></main></div><?php wp_footer();?></body></html>

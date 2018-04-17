@@ -20,7 +20,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="n_Extend">
-<header data-id="n_Extend_header" class="flex n_Extend_container"><?php do_action('3n_header');?></header>
+<div id="n_View">
+<header data-id="n_View_header" class="flex n_View_container"><?php do_action('3n_header');?></header>
 <main id="">
-<div id="n_Extend_banner"></div>
+<div id="n_View_banner"></div>
