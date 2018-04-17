@@ -50,7 +50,54 @@
 }
 footer#footer {
     background-color: #0d0d0d;
-    figure {
-        margin: 0px;
+    .n_View_container {
+        padding: 5rem 0 3rem;
+        align-items: center;
+        figure {
+            margin: 0px;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            a.n-View-footer-logo-a {
+                display: block;
+                margin-bottom: 15px;
+                img {
+                    width: 110px;
+                }
+            }
+            figcaption {
+                text-align: center;
+                color: #fff;
+                strong {
+                    font-weight: normal;
+                }
+            }
+            div.n-View-footer-socail {
+                position: absolute;
+                bottom: 0px;
+                a {
+                    color: #fff;
+                    i {
+                        font-size: 25px;
+                        padding: 0 1.5rem;
+                    }
+                }
+            }
+        }
+        aside {
+            color: #696767;
+            p {
+                margin: 1.3rem 0 0;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            p:first-child {
+                margin-top: 0px;
+            }
+            p:last-child {
+                margin-top: 3.5rem;
+            }
+        }
     }
 }

@@ -32,21 +32,27 @@ if ( ! class_exists( 'n_View_template' ) ) :
         }
         public function footer( $att )
         {
-            $out  = '<figure id="n-View-footer-logo">';
-            $out .= '<a href="'.$att['link'].'" title="'.$att['title'].'"><img src="'.$att['logo'].'" alt="'.$att['title'].'" /></a>';
-            $out .= '<figcaption><strong>Tạo sự khác biệt cho thường hiệu của bạn.</figcaption>';
+            $out  = '<figure id="n-View-footer-logo" class="flex col-1">';
+            $out .= '<a class="n-View-footer-logo-a" href="'.$att['link'].'" title="'.$att['title'].'"><img src="'.$att['logo'].'" alt="'.$att['title'].'" /></a>';
+            $out .= '<figcaption><strong>Tạo sự khác biệt cho thường hiệu của bạn.</strong></figcaption>';
+            $out .= '<div class="n-View-footer-socail">';
             $out .= '<a href="'.$att['socail']['facebook'].'"><i class="ion-social-facebook"></i></a>';
             $out .= '<a href="'.$att['socail']['tw'].'"><i class="ion-social-twitter"></i></a>';
             $out .= '<a href="'.$att['socail']['youtube'].'"><i class="ion-social-youtube"></i></a>';
+            $out .= '</div>';
             $out .= '</figure>';
             echo $out;
         }
         public function contact( $att ) 
         {
             if ( $att['position'] == 'footer' ) {
-                $out  = '<aside id="n-View-contact">';
-                $out .= '<p><span>'.$att['time_work']['name'].'</span>'.$att['time_work']['time']['start'].' - '.$att['time_work']['time']['off'].'</p>';
-                $out .= '<aside>';
+                $out  = '<aside id="n-View-contact" class="col-1">';
+                $out .= '<p><span>'.$att['time_work']['name'].': </span>'.$att['time_work']['time']['start'].' - '.$att['time_work']['time']['off'].'</p>';
+                $out .= '<p><span>P: </span>'.$att['phone'].'</p>';
+                $out .= '<p><span>E: </span>'.$att['email'].'</p>';
+                $out .= '<p><span>S: </span>'.$att['skype'].'</p>';
+                $out .= '<p><span>Office: </span>'.$att['adds'].'</p>';
+                $out .= '</aside>';
             } else {
                 $out .= 'NONE';
             }

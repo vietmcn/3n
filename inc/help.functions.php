@@ -33,6 +33,7 @@ add_action( '3n_footer', function() {
             'youtube' => 'https://facebook.com',
         ),
     ) );
+    echo '<div class="col-2"></div>';
     $View_template->contact( array(
         'position' => 'footer',
         'time_work' => array(
@@ -42,9 +43,9 @@ add_action( '3n_footer', function() {
                 'off' => '18h30 PM', 
             ),
         ),
-        'phone' => '',
-        'Email' => '',
-        'Skype' => '',
-        'adds' => '',
+        'phone' => '0909 18 77 28',
+        'email' => 'info@3abrand.com',
+        'skype' => '3abrand.com',
+        'adds' => '14 Phan Ton St, Da Kao Ward, Distrist 1, HCMC, Vietnam',
     ) );
 } );
