@@ -12,6 +12,8 @@
 //Get VerSion Template
 $version = wp_get_theme('3n');
 $n_ver = $version->get( 'Version' );
+//Admin
+require_once 'inc/Admin/class.control.php';
 //Setup template
 require_once 'inc/help.setup.php';
 //Functions

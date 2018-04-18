@@ -2,6 +2,11 @@
 if( !defined( 'ABSPATH' ) ) {
     exit;
 }
+//Field
+require_once 'Extend/class.field.php';
+//View
+require_once 'View/class.front.php';
+
 // Remove Bar Admin
 add_filter('show_admin_bar', '__return_false');
 // Setup Template
@@ -72,6 +77,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	// Theme stylesheet.
 	wp_enqueue_style( '3n-style', get_theme_file_uri( '/style.css' ), '', $n_ver, 'all' );
 	wp_enqueue_style( '3n-icon', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', '', '2.0.1', 'all' );
+	wp_enqueue_style( '3n-font', '//fonts.googleapis.com/css?family=Roboto:400,500,700', '', '', 'all' );
 	// Check Deivce
 	if ( wp_is_mobile() ) {
 
