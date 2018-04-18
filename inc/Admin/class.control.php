@@ -15,9 +15,11 @@ if ( !class_exists( 'n_Admin_control' ) ) {
         }
         public function n_welcome_screen()
         {
+            global 
             ?>
                 <section id="n-custom">
                     <form method="post" action="options.php">
+
                     </form>
                 </section>
             <?php
