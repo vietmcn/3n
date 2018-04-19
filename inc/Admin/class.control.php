@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( !class_exists( 'n_Admin_control' ) ) {
     class n_Admin_control
     {
-        public function n_welcome_screen()
+        public static function n_welcome_screen()
         {
             ?>
                 <section id="n-custom">

@@ -2,12 +2,10 @@
 if ( ! defined('ABSPATH') ) {
     exit;
 }
+// import Class Welcome Extend Template
 require_once dirname( N_EXTEND_FILE ) .'/inc/Admin/class.control.php';
 
-add_action( 'admin_menu', 	'n_register_menu_option_template' );
-
-function n_register_menu_option_template()
-{
+function n_register_menu_option_template() {
     add_menu_page(
         __( '3Abrand - Mở Rộng Giao Diện', '3n_' ),
             '3Abrand+', // Tên Phần Mở Rộng
@@ -19,12 +17,13 @@ function n_register_menu_option_template()
     );
     add_action( 'admin_init',   'register_settings' );
 }
-function register_settings()
-{
+add_action( 'admin_menu', 	'n_register_menu_option_template' );
+
+function register_settings() {
     register_setting( 'n_temp_option', 'n_add_option_item' );
 }
-function n_front_option()
-{
-    global $n_Admin_Control;
-    $n_Admin_Control->n_welcome_screen();
+function n_front_option() {
+    n_Admin_control::n_welcome_screen( array(
+        '' => '',
+    ) );
 }
