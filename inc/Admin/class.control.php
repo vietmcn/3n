@@ -5,21 +5,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( !class_exists( 'n_Admin_control' ) ) {
     class n_Admin_control
     {
-        public function __construct()
-        {
-            add_action( 'admin_menu', 	array( $this, 'welcome_register_menu' ) );
-        }
-        public function welcome_register_menu()
-        {
-            add_theme_page( '3n', 'Custom', 'activate_plugins', 'n-welcome', array( $this, 'n_welcome_screen' ) );
-        }
         public function n_welcome_screen()
         {
-            global 
             ?>
                 <section id="n-custom">
                     <form method="post" action="options.php">
-
+                        <?php 
+                            settings_fields( 'n_temp_option' );
+                            do_settings_sections( 'n_temp_option' );
+                            get_settings_errors( 'n_temp_option' );
+                            settings_errors( 'n_temp_option' );          
+                        ?>
+                        <article id="page1" class="show top scrollbar-inner">
+                            
+                            <button type="submit"> Lưu Lại</button>
+                        </article>
                     </form>
                 </section>
             <?php
@@ -27,4 +27,4 @@ if ( !class_exists( 'n_Admin_control' ) ) {
     }
     
 }
-return new n_Admin_control();
+$n_Admin_Control = new n_Admin_control();
