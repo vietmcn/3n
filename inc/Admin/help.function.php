@@ -15,15 +15,22 @@ function n_register_menu_option_template() {
             'dashicons-before-vietmcn_icon', // Icon 
             '64'
     );
-    add_action( 'admin_init',   'register_settings' );
+    add_action( 'admin_init', function() { 
+        register_setting( 'n_temp_option', 'n_add_option_item' );
+    } );
 }
-add_action( 'admin_menu', 	'n_register_menu_option_template' );
+add_action( 'admin_menu', 'n_register_menu_option_template' );
 
-function register_settings() {
-    register_setting( 'n_temp_option', 'n_add_option_item' );
-}
+//Import File Stye And Java
+add_action( 'admin_enqueue_scripts', function() {
+    global $n_ver;
+    wp_enqueue_style( 'n-style-admin', get_template_directory_uri() . '/Public/Css/panel.min.css', false, $n_ver );
+} );
+//Render
 function n_front_option() {
     n_Admin_control::n_welcome_screen( array(
-        '' => '',
+        'n_title' => '3Abrand',
+        'n_nameoption' => 'Cài đặt tuỳ chỉnh themes',
+        'n_version' => '1.0',
     ) );
 }
