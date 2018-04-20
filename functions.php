@@ -23,6 +23,6 @@ if ( is_admin() ) {
 	#require_once 'Inc/Admin/help.function.php';
 }
 // Config template
-require_once 'Inc/help.config.php';
+require_once 'inc/help.config.php';
 // Functions
-require_once 'Inc/help.functions.php';
+require_once 'inc/help.functions.php';
