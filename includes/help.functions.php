@@ -2,7 +2,7 @@
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
-require_once 'View/class.front.php';
+require_once 'View/class.template.php';
 
 // Template Header
 add_action( '3n_header', function() {
