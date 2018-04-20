@@ -36,8 +36,11 @@ if ( ! class_exists( 'n_View_template' ) ) :
             $out .= '<a class="n-View-footer-logo-a" href="'.$att['link'].'" title="'.$att['title'].'"><img src="'.$att['logo'].'" alt="'.$att['title'].'" /></a>';
             $out .= '<figcaption><strong>Tạo sự khác biệt cho thường hiệu của bạn.</strong></figcaption>';
             $out .= '<div class="n-View-footer-socail">';
-            $out .= '<a href="'.$att['socail']['facebook'].'"><i class="ion-social-facebook"></i></a>';
+            $out .= '<a href="'.$att['socail']['linkdin'].'"><i class="ion-social-linkedin"></i></a>';
             $out .= '<a href="'.$att['socail']['tw'].'"><i class="ion-social-twitter"></i></a>';
+            $out .= '<a href="'.$att['socail']['google_plus'].'"><i class="ion-social-googleplus"></i></a>';
+            $out .= '<a href="'.$att['socail']['instagram'].'"><i class="ion-social-instagram-outline"></i></a>';
+            $out .= '<a href="'.$att['socail']['facebook'].'"><i class="ion-social-facebook"></i></a>';
             $out .= '<a href="'.$att['socail']['youtube'].'"><i class="ion-social-youtube"></i></a>';
             $out .= '</div>';
             $out .= '</figure>';
@@ -47,8 +50,9 @@ if ( ! class_exists( 'n_View_template' ) ) :
         {
             if ( $att['position'] == 'footer' ) {
                 $out  = '<aside id="n-View-contact" class="col-1">';
-                $out .= '<p><span>'.$att['time_work']['name'].': </span>'.$att['time_work']['time']['start'].' - '.$att['time_work']['time']['off'].'</p>';
-                $out .= '<p><span>P: </span>'.$att['phone'].'</p>';
+                $out .= '<p><span>'.$att['time_work']['name'].': </span>'.$att['time_work']['time']['start'].' - '.$att['time_work']['time']['off'].' '.$att['time_work']['time']['day'].'</p>';
+                $out .= '<p class="minus"><span><i class="ion-minus-round"></i></span></p>';
+                $out .= '<p class="phone"><span>P: </span>'.$att['phone'].'</p>';
                 $out .= '<p><span>E: </span>'.$att['email'].'</p>';
                 $out .= '<p><span>S: </span>'.$att['skype'].'</p>';
                 $out .= '<p><span>Office: </span>'.$att['adds'].'</p>';
@@ -60,4 +64,4 @@ if ( ! class_exists( 'n_View_template' ) ) :
         }
     }
 endif;
-$View_template = new n_View_template;
+$n_View_template = new n_View_template;

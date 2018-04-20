@@ -3,9 +3,9 @@ if( !defined( 'ABSPATH' ) ) {
     exit;
 }
 //Field
-require_once ( ABSPATH .'Extend/class.field.php' );
+require_once 'Extend/class.field.php';
 //View
-require_once ( ABSPATH .'View/class.front.php' );
+require_once 'View/class.template.php';
 
 // Remove Bar Admin
 add_filter('show_admin_bar', '__return_false');
@@ -82,7 +82,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	if ( wp_is_mobile() ) {
 
 	} else {
-		wp_enqueue_style( '3n-desktop-style', get_theme_file_uri( '/Public/css/desktop.min.css' ), array('3n-style'), $n_ver, 'all' );
+		wp_enqueue_style( '3n-desktop-style', get_theme_file_uri( '/assets/Css/desktop.min.css' ), array('3n-style'), $n_ver, 'all' );
 	}
 
 } );

@@ -22,5 +22,4 @@
 <body <?php body_class(); ?>>
 <div id="n_View">
 <header data-id="n_View_header" class="flex n_View_container"><?php do_action('3n_header');?></header>
-<main id="">
-<div id="n_View_banner"></div>
+<main id="n-Main-View">
