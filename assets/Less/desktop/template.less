@@ -41,14 +41,71 @@
         }
     }
 }
-#n_View_banner {
-    background-image: url('http://job.co/wp-content/uploads/2018/04/banner-01.png');
+#n_View_banner_header,#n_View_banner_about {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 800px;
 }
-
+#n_View_banner_header {
+    background-image: url('http://job.co/wp-content/uploads/2018/04/banner-01.png');
+    height: 750px;
+}
+#n_View_banner_about {
+    background-image: url('../img/banner-2.png');
+    .n_View_about {
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+        width: 530px;
+        min-width: auto;
+        justify-content: center;
+        position: relative;
+        .n_View_Icon_About {
+            background-image: url(../img/icon-about.png);
+            height: 150px;
+            width: 120px;
+            background-size: contain;
+            position: absolute;
+            top: 40px;
+            background-repeat: no-repeat;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-size: 40px;
+            color: #f40000;
+            margin: 0px 0px 35px;
+        }
+        h4 {
+            color: #fffcfc;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin: 10px 0px;
+        }
+        p {
+            color: #fffcfc;
+            line-height: 22px;
+            text-align: center;
+        }
+        div {
+            margin-top: 1rem;
+            a {
+                background-color: #e21e26;
+                border-radius: 15px;
+                margin: 0 40px;
+                height: 29px;
+                width: 110px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: #000;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 15px;
+            }
+        }
+    }
+}
 // Footer
 footer#footer {
     background-color: #0d0d0d;
