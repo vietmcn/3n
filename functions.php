@@ -20,7 +20,7 @@ $version = wp_get_theme('3n');
 $n_ver = $version->get( 'Version' );
 if ( is_admin() ) {
 	//Admin
-	require_once 'Inc/Admin/help.function.php';
+	#require_once 'Inc/Admin/help.function.php';
 }
 // Config template
 require_once 'Inc/help.config.php';
