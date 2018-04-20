@@ -28,9 +28,32 @@ add_action( 'admin_enqueue_scripts', function() {
 } );
 //Render
 function n_front_option() {
-    n_Admin_control::n_welcome_screen( array(
-        'n_title' => '3Abrand',
-        'n_nameoption' => 'Cài đặt tuỳ chỉnh themes',
-        'n_version' => '1.0',
-    ) );
+    ?>
+        <section id="n-custom">
+            <?php n_Admin_control::header( array(
+                'n_title' => '3Abrand+',
+                'n_nameoption' => 'Tuỳ CHỉnh Giao Diện',
+            ) ); ?>
+            <form method="POST" action="option.php">
+                <div class="form">
+                    <?php 
+                        settings_fields( 'n_temp_option' );
+                        do_settings_sections( 'n_temp_option' );
+                        get_settings_errors( 'n_temp_option' );
+                        settings_errors( 'n_temp_option' );
+                        n_Admin_control::form( array(
+                            'logo' => true,
+                            'n_title' => true,
+                            'n_font' => true,
+                            'adds' => true,
+                        ) );
+                    ?>
+                    <button type="submit">Lưu Lại</button>
+                </div>
+            </form>
+        </section>
+        <div class="footer flex">
+            Design & Developed by <a href="//vietmcn.com">Vietmcn.com</a>
+        </div>
+    <?php
 }

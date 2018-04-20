@@ -12,12 +12,17 @@
 if ( ! defined( 'N_EXTEND_FILE' ) ) {
 	define( 'N_EXTEND_FILE', __FILE__ );
 }
+if ( ! defined( 'N_EXTEND_VER' ) ) {
+	define( 'N_EXTEND_VER', '1.0' );
+}
 //Get VerSion Template
 $version = wp_get_theme('3n');
 $n_ver = $version->get( 'Version' );
-//Admin
-require_once 'inc/Admin/help.function.php';
-//Setup template
-require_once 'inc/help.setup.php';
-//Functions
+if ( is_admin() ) {
+	//Admin
+	require_once 'inc/Admin/help.function.php';
+}
+// Config template
+require_once 'inc/help.config.php';
+// Functions
 require_once 'inc/help.functions.php';
