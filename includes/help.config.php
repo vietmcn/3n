@@ -3,9 +3,9 @@ if( !defined( 'ABSPATH' ) ) {
     exit;
 }
 //Field
-require_once 'Extend/class.field.php';
+require_once ( ABSPATH .'Extend/class.field.php' );
 //View
-require_once 'View/class.front.php';
+require_once ( ABSPATH .'View/class.front.php' );
 
 // Remove Bar Admin
 add_filter('show_admin_bar', '__return_false');
