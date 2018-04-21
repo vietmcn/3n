@@ -11,7 +11,7 @@ add_action( '3n_header', function() {
     $image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
     $n_View_template->logo( array(
         'title' => get_bloginfo('name'),
-        'link' => $image[0],
+        'link' => ( isset( $image[0] ) ) ? $image[0] : get_template_directory_uri().'/assets/img/Logo-150x150.png',
     ) );
     $n_View_template->menu( array(
         'slug' => 'menu_header',
@@ -19,6 +19,7 @@ add_action( '3n_header', function() {
         'styleCss' => 'n-View-menu-header',
     ) );
 } );
+// Template About
 add_action( '3n_index', function() {
     $out  = '<div id="n_View_banner_header"></div>';
     $out .= '<div id="n_View_banner_about">';
@@ -33,6 +34,18 @@ add_action( '3n_index', function() {
     $out .= '<a href="/contact" title="Liên Hệ">Chi Tiết</a>';
     $out .= '<a href="/">Liên Hệ</a>';
     $out .= '</div>';
+    $out .= '</div>';
+    $out .= '</div>';
+    echo $out;
+} );
+//Template Client 
+add_action( '3n_index', function() {
+    $out  = '<div id="n_View_banner_client">';
+    $out .= '<div class="n_View_container">';
+    $out .= '<h3>Khách hàng của chúng tôi</h2>';
+    $out .= '<ul>';
+    $out .= '<li><a href="#"><span class="client_1"></span></li>';
+    $out .= '</ul>';
     $out .= '</div>';
     $out .= '</div>';
     echo $out;
