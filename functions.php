@@ -23,6 +23,4 @@ if ( is_admin() ) {
 	#require_once 'Inc/Admin/help.function.php';
 }
 // Config template
-require_once 'includes/help.config.php';
-// Functions
-require_once 'includes/help.functions.php';
+require_once 'App/vi.config.php';

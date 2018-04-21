@@ -1,11 +1,24 @@
-<?php 
+<?php
+/**
+ * The theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link 
+ *
+ * @package WordPress
+ * @subpackage 3N
+ * @since 1.0
+ * @version 1.0
+ */
 if( !defined( 'ABSPATH' ) ) {
     exit;
 }
-//Field
-require_once 'Extend/class.field.php';
-//View
-require_once 'View/class.template.php';
+// Import Inc
+require_once 'includes/vi-functions.php';
+
+// Import template
+require_once 'template/vi-config.php';
 
 // Remove Bar Admin
 add_filter('show_admin_bar', '__return_false');
@@ -84,5 +97,5 @@ add_action( 'wp_enqueue_scripts', function() {
 	} else {
 		wp_enqueue_style( '3n-desktop-style', get_theme_file_uri( '/assets/css/desktop.min.css' ), array('3n-style'), $n_ver, 'all' );
 	}
-
+	
 } );

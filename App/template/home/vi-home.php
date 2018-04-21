@@ -65,3 +65,4 @@ if ( ! class_exists( 'n_View_template' ) ) :
     }
 endif;
 $n_View_template = new n_View_template;
+

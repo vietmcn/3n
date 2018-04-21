@@ -21,7 +21,7 @@ function n_register_menu_option_template() {
 }
 add_action( 'admin_menu', 'n_register_menu_option_template' );
 
-//Import File Stye And Java
+//Import File Stye And Javascript
 add_action( 'admin_enqueue_scripts', function() {
     global $n_ver;
     wp_enqueue_style( 'n-style-admin', get_template_directory_uri() . '/Public/Css/panel.min.css', false, $n_ver );

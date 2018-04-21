@@ -18,6 +18,8 @@ if ( !class_exists( 'n_Extend_field' ) ) {
                 case 'textbox':
                    echo $this->textbox( $att );
                    break;
+                case 'dropdown' :
+                    break;
             }
         }
     }
