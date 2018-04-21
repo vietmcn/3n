@@ -82,7 +82,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	if ( wp_is_mobile() ) {
 
 	} else {
-		wp_enqueue_style( '3n-desktop-style', get_theme_file_uri( '/assets/Css/desktop.min.css' ), array('3n-style'), $n_ver, 'all' );
+		wp_enqueue_style( '3n-desktop-style', get_theme_file_uri( '/assets/css/desktop.min.css' ), array('3n-style'), $n_ver, 'all' );
 	}
 
 } );
