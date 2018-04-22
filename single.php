@@ -1,0 +1,1 @@
+<?php get_header();do_action('3n_single');get_footer();

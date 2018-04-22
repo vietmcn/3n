@@ -31,6 +31,7 @@
                     text-decoration: none;
                     padding-bottom: 5px;
                     color: #000;
+                    font-size: 14px;
                 }
             }
             li.current-menu-item  {
@@ -51,11 +52,12 @@
 //Header
 #n_View_banner_header {
     background-image: url('../img/banner-1.png');
-    height: 750px;
+    height: 45vw;
 }
 // About
 #n_View_banner_about {
     background-image: url('../img/banner-2.png');
+    height: 40vw;
     .n_View_about {
         height: 100%;
         align-items: center;
@@ -105,6 +107,79 @@
                 text-decoration: none;
                 font-weight: 700;
                 font-size: 15px;
+            }
+        }
+    }
+}
+// Client 
+#n_View_banner_client {
+    .n_View_container {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    h3 {
+        margin: 2.5rem 0;
+        justify-content: center;
+        color: #e21e26;
+        font-size: 25px;
+        text-transform: uppercase;
+        line-height: 35px;
+        font-weight: 700;
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        li {
+            padding: 0px;
+            list-style: none;
+            display: inline-flex;
+            a {
+                span {
+                    display: block;
+                    background-image: url( '../img/client.png' );
+                    height: 125px;
+                    width: 125px;
+                    background-size: cover;
+                    padding: 0 6px;
+                }
+                span.client_1 {
+                    background-position: -60px 120px;
+                    width: 110px;
+                }
+                span.client_2 {
+                    background-position: -187px 120px;
+                }
+                span.client_3 {
+                    background-position: -350px 120px;
+                    width: 80px;
+                }
+                span.client_4 {
+                    background-position: -475px 120px;
+                    width: 120px;
+                }
+                span.client_5 {
+                    background-position: -610px 120px;
+                }
+                span.client_6 {
+                    background-position: -745px 120px;
+                    width: 165px;
+                }
+                span.client_7 {
+                    background-position: -922px 120px;
+                    width: 120px;
+                }
+                span.client_8 {
+                    background-position: 320px 120px;
+                    width: 120px;
+                }
+                span.client_9 {
+                    background-position: 175px 120px;
+                    width: 110px;
+                }
+                @media only screen and ( max-width: 1024px ) {
+
+                }
             }
         }
     }

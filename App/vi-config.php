@@ -16,9 +16,10 @@ if( !defined( 'ABSPATH' ) ) {
 }
 // Import Inc
 require_once 'includes/vi-functions.php';
-
-// Import template
-require_once 'template/vi-config.php';
+// Import Hook
+require_once 'hook/vi-front.php';
+// Import View
+require_once 'view/vi-functions.php';
 
 // Remove Bar Admin
 add_filter('show_admin_bar', '__return_false');
@@ -95,7 +96,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	if ( wp_is_mobile() ) {
 
 	} else {
-		wp_enqueue_style( '3n-desktop-style', get_theme_file_uri( '/assets/css/desktop.min.css' ), array('3n-style'), $n_ver, 'all' );
 	}
+	wp_enqueue_style( '3n-desktop-style', get_theme_file_uri( '/App/assets/css/desktop.min.css' ), array('3n-style'), $n_ver, 'all' );
 	
 } );
