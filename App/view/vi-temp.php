@@ -62,6 +62,26 @@ add_action( '3n_index', function() {
     $out .= '</div>';
     echo $out;
 } );
+// Quy Trinh
+add_action( '3n_index', function() {
+    $out  = '<div id="n_View_banner_qt">';
+    $out .= '<div class="n_View_container">';
+    $out .= '<h3 class="flex">Quy Trình Của Chúng Tôi</h2>';
+    $out .= '<ul>';
+    $out .= '<li><a href="#"><span class="client_1"></span></li>';
+    $out .= '<li><a href="#"><span class="client_2"></span></li>';
+    $out .= '<li><a href="#"><span class="client_3"></span></li>';
+    $out .= '<li><a href="#"><span class="client_4"></span></li>';
+    $out .= '<li><a href="#"><span class="client_5"></span></li>';
+    $out .= '<li><a href="#"><span class="client_6"></span></li>';
+    $out .= '<li><a href="#"><span class="client_7"></span></li>';
+    $out .= '<li><a href="#"><span class="client_8"></span></li>';
+    $out .= '<li><a href="#"><span class="client_9"></span></li>';
+    $out .= '</ul>';
+    $out .= '</div>';
+    $out .= '</div>';
+    echo $out;
+} );
 // Template Footer 
 add_action('3n_footer', function() {
     global $n_View_template;
