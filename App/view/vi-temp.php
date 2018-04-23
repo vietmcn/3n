@@ -6,12 +6,10 @@ if ( !defined( 'ABSPATH' ) ) :
     exit;
 endif;
 /**
- * Import View
+ * Import View Class
  */
-require_once ( N_EXTEND_FOLDER .'/App/view/class/vi-class-home.php' );
+require_once ( N_EXTEND_FOLDER .'/App/view/class/vi-class-front.php' );
 
-
-// Template Header
 add_action( '3n_header', function() {
     global $n_View_template;
     //Call Logo
@@ -26,28 +24,24 @@ add_action( '3n_header', function() {
         'styleCss' => 'n-View-menu-header',
     ) );
 } );
-if ( !function_exists( 'n_View_cover' ) ) {
-    // Template About
-    function n_View_cover() {
-        $out  = '<div id="n_View_banner_header"></div>';
-        $out .= '<div id="n_View_banner_about">';
-        $out .= '<div class="n_View_container n_View_about flex">';
-        $out .= '<span class="n_View_Icon_About"></span>';
-        $out .= '<h2>Giới Thiệu Về Chúng Tôi</h2>';
-        $out .= '<h4>Tạo sự khác biệt cho thương hiệu của bạn</h4>';
-        $out .= '<p>3A Agency là một cơ quan kỹ thuật số và sáng tạo đầy đủ dịch vụ có trụ sở tại thành phố Hồ Chí Minh, Việt Nam. 
-        Chúng tôi là một nhóm các chuyên gia trẻ tuổi có chuyên môn về thiết kế đáp ứng và các nền tảng sáng tạo, 
-        chuyên cung cấp các giải pháp kỹ thuật số hiệu quả, có thể đo lường và sáng tạo cho khách hàng của chúng tôi.</p>';
-        $out .= '<div>';
-        $out .= '<a href="/contact" title="Liên Hệ">Chi Tiết</a>';
-        $out .= '<a href="/">Liên Hệ</a>';
-        $out .= '</div>';
-        $out .= '</div>';
-        $out .= '</div>';
-        echo $out;
-    }
-}
-
+add_action( '3n_index', function() {
+    $out  = '<div id="n_View_banner_header"></div>';
+    $out .= '<div id="n_View_banner_about">';
+    $out .= '<div class="n_View_container n_View_about flex">';
+    $out .= '<span class="n_View_Icon_About"></span>';
+    $out .= '<h2>Giới Thiệu Về Chúng Tôi</h2>';
+    $out .= '<h4>Tạo sự khác biệt cho thương hiệu của bạn</h4>';
+    $out .= '<p>3A Agency là một cơ quan kỹ thuật số và sáng tạo đầy đủ dịch vụ có trụ sở tại thành phố Hồ Chí Minh, Việt Nam. 
+    Chúng tôi là một nhóm các chuyên gia trẻ tuổi có chuyên môn về thiết kế đáp ứng và các nền tảng sáng tạo, 
+    chuyên cung cấp các giải pháp kỹ thuật số hiệu quả, có thể đo lường và sáng tạo cho khách hàng của chúng tôi.</p>';
+    $out .= '<div>';
+    $out .= '<a href="/contact" title="Liên Hệ">Chi Tiết</a>';
+    $out .= '<a href="/">Liên Hệ</a>';
+    $out .= '</div>';
+    $out .= '</div>';
+    $out .= '</div>';
+    echo $out;
+} );
 //Template Client 
 add_action( '3n_index', function() {
     $out  = '<div id="n_View_banner_client">';
@@ -69,7 +63,7 @@ add_action( '3n_index', function() {
     echo $out;
 } );
 // Template Footer 
-function n_View_footer() {
+add_action('3n_footer', function() {
     global $n_View_template;
     $image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
     $n_View_template->footer( array(
@@ -101,4 +95,4 @@ function n_View_footer() {
         'skype' => '3abrand.com',
         'adds' => '14 Phan Ton St, Da Kao Ward, Distrist 1, HCMC, Vietnam',
     ) );
-}
+} )
