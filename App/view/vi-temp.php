@@ -95,4 +95,4 @@ add_action('3n_footer', function() {
         'skype' => '3abrand.com',
         'adds' => '14 Phan Ton St, Da Kao Ward, Distrist 1, HCMC, Vietnam',
     ) );
-} )
+} );
