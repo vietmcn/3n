@@ -43,21 +43,20 @@
     }
 }
 //Cover
-#n_View_banner_header,#n_View_banner_about {
+#n_View_banner_header,#n_View_banner_about, #n_View_banner_qt {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 800px;
+    padding: 40px 0px;
 }
 //Header
 #n_View_banner_header {
     background-image: url('../img/banner-1.png');
-    height: 45vw;
+    min-height: 35vw;
 }
 // About
 #n_View_banner_about {
     background-image: url('../img/banner-2.png');
-    height: 40vw;
     .n_View_about {
         height: 100%;
         align-items: center;
@@ -65,14 +64,14 @@
         width: 530px;
         min-width: auto;
         justify-content: center;
-        position: relative;
+        margin-bottom: 5rem;
         .n_View_Icon_About {
             background-image: url(../img/icon-about.png);
             height: 150px;
             width: 120px;
             background-size: contain;
-            position: absolute;
-            top: 60px;
+            position: relative;
+            top: 30px;
             background-repeat: no-repeat;
         }
         h2 {
@@ -184,6 +183,52 @@
         }
     }
 }
+// Quy Trình 
+#n_View_banner_qt {
+    background-image: url('../img/banner-3.png');
+    h3 {
+        justify-content: center;
+        margin: 0;
+        padding: 2.5rem 0 35px;
+        font-size: 1.5rem;
+        color: red;
+        text-transform: uppercase;
+    }
+    .content {
+        .content_ {
+            width: 100/4%;
+            color: #fff;
+            padding: 0 10px;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            h5 {
+                font-size: 16px;
+                text-transform: uppercase;
+                margin: 30px 0 25px;
+            }
+            .icon {
+                background-size: cover;
+                height: 145px;
+                width: 145px;
+                display: block;
+            }
+            i.icontent_1 {
+                background-image: url('../img/icon-qt-01.png');
+            }
+            i.icontent_2 {
+                background-image: url('../img/icon-qt-02.png');
+            }
+            i.icontent_3 {
+                background-image: url('../img/icon-qt-03.png');
+            }
+            i.icontent_4 {
+                background-image: url('../img/icon-qt-04.png');
+            }
+        }
+    }
+}
 // Footer
 footer#footer {
     background-color: #0d0d0d;
@@ -217,7 +262,7 @@ footer#footer {
                     color: #5b5c66;
                     i {
                         font-size: 28px;
-                        padding: 0 10px;
+                        padding: 0 7px;
                     }
                 }
             }
