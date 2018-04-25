@@ -13,6 +13,6 @@ add_action( '3n_index', 'n_View_qt' );
  * Name: Serveice
  * 
  */
-add_action( '3n_page', 'n_View_contact' );
+add_action( '3n_page', 'n_View_page' );
 add_action( '3n_page', 'v_View_client' );
 add_action( '3n_page', 'n_View_qt' );
