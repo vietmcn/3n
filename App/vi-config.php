@@ -17,7 +17,7 @@ if( !defined( 'ABSPATH' ) ) {
 // Import Inc
 require_once 'includes/vi-functions.php';
 // Import View
-require_once 'view/vi-temp.php';
+require_once 'view/vi-includes.php';
 
 // Remove Bar Admin
 add_filter('show_admin_bar', '__return_false');

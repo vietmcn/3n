@@ -10,22 +10,25 @@ endif;
  */
 require_once ( N_EXTEND_FOLDER .'/App/view/class/vi-class-front.php' );
 
-add_action( '3n_header', function() {
+function n_View_header() {
     global $n_View_template;
     //Call Logo
     $image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
     $n_View_template->logo( array(
         'title' => get_bloginfo('name'),
-        'link' => ( isset( $image[0] ) ) ? $image[0] : get_template_directory_uri().'/assets/img/Logo-150x150.png',
+        'link' => ( isset( $image[0] ) ) ? $image[0] : get_template_directory_uri().'/App/assets/img/Logo-150x150.png',
     ) );
     $n_View_template->menu( array(
         'slug' => 'menu_header',
         'echo' => 'true',
         'styleCss' => 'n-View-menu-header',
     ) );
-} );
-add_action( '3n_index', function() {
-    $out  = '<div id="n_View_banner_header"></div>';
+}
+function n_View_index() {
+    $out = '';
+    if ( is_home() || is_front_page() ) {
+        $out  .= '<div id="n_View_banner_header"></div>';
+    }
     $out .= '<div id="n_View_banner_about">';
     $out .= '<div class="n_View_container n_View_about flex">';
     $out .= '<span class="n_View_Icon_About"></span>';
@@ -41,54 +44,60 @@ add_action( '3n_index', function() {
     $out .= '</div>';
     $out .= '</div>';
     echo $out;
-} );
+}
 // Service 
-add_action( '3n_index', function() {
+function n_View_service() {
     $out  = '<div id="n_View_banner_service">';
     $out .= '<div class="n_View_container n_View_service flex">';
     $out .= '<div class="n_View_service_icon"></div>';
     $out .= '<ul class="grid">';
     $out .= '<h2>Dịch vụ <br/> chúng tôi</h2>';
-    $out .= '<li>';
+    $out .= '<li class="inline-felx">';
     $out .= '<h4>CONCEPT DEVELOPMENT</h4>';
     $out .= '<p>Giản đơn tạo nên xuất sắc. Khi thực hiện những tác phẩm mang vị thế tầm vóc của công ty như Print-Ad, Brochure, Profile, Annual Report, chắc chắn bạn sẽ muốn có một ý tưởng tốt để chuyển tải và thúc đẩy hiệu quả công việc nhanh nhất.</p>';
     $out .= '<a href="#">Xem Chi Tiết</a>';
     $out .= '</li>';
-    $out .= '<li>';
-    $out .= '<h4>CONCEPT DEVELOPMENT</h4>';
-    $out .= '<p>Giản đơn tạo nên xuất sắc. Khi thực hiện những tác phẩm mang vị thế tầm vóc của công ty như Print-Ad, Brochure, Profile, Annual Report, chắc chắn bạn sẽ muốn có một ý tưởng tốt để chuyển tải và thúc đẩy hiệu quả công việc nhanh nhất.</p>';
+    $out .= '<li class="inline-felx">';
+    $out .= '<h4>PACKAGING DESIGN</h4>';
+    $out .= '<p>Hãy khiến khách hàng dừng lại và chú ý tới sản phẩm của bạn. Thông điệp được truyền đi chỉ một cái nhìn thoáng qua, xác định bạn là ai. Lebrand sáng tạo nên những thiết kế bao bì độc đáo và tạo nên sự khác biệt cho sản phẩm</p>';
     $out .= '<a href="#">Xem Chi Tiết</a>';
     $out .= '</li>';
-    $out .= '<li>';
-    $out .= '<h4>CONCEPT DEVELOPMENT</h4>';
-    $out .= '<p>Giản đơn tạo nên xuất sắc. Khi thực hiện những tác phẩm mang vị thế tầm vóc của công ty như Print-Ad, Brochure, Profile, Annual Report, chắc chắn bạn sẽ muốn có một ý tưởng tốt để chuyển tải và thúc đẩy hiệu quả công việc nhanh nhất.</p>';
+    $out .= '<li class="inline-felx">';
+    $out .= '<h4>BRAND GUIDELINES</h4>';
+    $out .= '<p>Hướng dẫn thương hiệu của một tổ chức cần phải có một sự hiểu biết đầy đủ về những thương hiệu tượng trưng. Mục tiêu của chúng tôi là phát triển một hệ thống hướng dẫn mở rộng thương hiệu mà có kết cấu và độ sâu.</p>';
     $out .= '<a href="#">Xem Chi Tiết</a>';
     $out .= '</li>';
-    $out .= '<li>';
-    $out .= '<h4>CONCEPT DEVELOPMENT</h4>';
-    $out .= '<p>Giản đơn tạo nên xuất sắc. Khi thực hiện những tác phẩm mang vị thế tầm vóc của công ty như Print-Ad, Brochure, Profile, Annual Report, chắc chắn bạn sẽ muốn có một ý tưởng tốt để chuyển tải và thúc đẩy hiệu quả công việc nhanh nhất.</p>';
+    $out .= '<li class="inline-felx">';
+    $out .= '<h4>WEB DESIGN</h4>';
+    $out .= '<p>Bạn đang muốn tạo một trang web đầy đủ các tính năng, giao diện thân thiện, bắt mắt, tích hợp mạng xã hội và nhiều hơn thế nữa. Chúng tôi có những ý tưởng sáng tạo kết hợp với kinh nghiệm nhiều năm để giúp bạn xây dựng một thương hiệu bền vững.</p>';
     $out .= '<a href="#">Xem Chi Tiết</a>';
     $out .= '</li>';
-    $out .= '<li>';
-    $out .= '<h4>CONCEPT DEVELOPMENT</h4>';
-    $out .= '<p>Giản đơn tạo nên xuất sắc. Khi thực hiện những tác phẩm mang vị thế tầm vóc của công ty như Print-Ad, Brochure, Profile, Annual Report, chắc chắn bạn sẽ muốn có một ý tưởng tốt để chuyển tải và thúc đẩy hiệu quả công việc nhanh nhất.</p>';
+    $out .= '<li class="inline-felx">';
+    $out .= '<h4>BRANDING</h4>';
+    $out .= '<p>Thương hiệu diễn đạt định vị độc nhất của bạn. Vui vẻ? Tin cậy? Vượt xa đối thủ? Hãy để logo, bảng màu, tất cả những gì thuộc về thương hiệu của bạn phản ánh điều đó. Không gây rối trí khách hàng và thương hiệu của bạn sẽ được ghi khắc trong tâm tưởng họ.</p>';
     $out .= '<a href="#">Xem Chi Tiết</a>';
     $out .= '</li>';
-    $out .= '<li>';
-    $out .= '<h4>CONCEPT DEVELOPMENT</h4>';
-    $out .= '<p>Giản đơn tạo nên xuất sắc. Khi thực hiện những tác phẩm mang vị thế tầm vóc của công ty như Print-Ad, Brochure, Profile, Annual Report, chắc chắn bạn sẽ muốn có một ý tưởng tốt để chuyển tải và thúc đẩy hiệu quả công việc nhanh nhất.</p>';
+    $out .= '<li class="inline-felx">';
+    $out .= '<h4>MARKETING ONLINE</h4>';
+    $out .= '<p>Gói dịch vụ này sẽ giúp quý Doanh nghiệp tiếp cận nhanh chóng và xây dựng cộng đồng khách hàng trên internet bằng những công cụ Marketing trực tuyến. Hãy để các chuyên gia của chúng tôi hướng dẫn lựa chọn đường lối marketing online đúng đắn cho bạn.</p>';
     $out .= '<a href="#">Xem Chi Tiết</a>';
     $out .= '</li>';
-    $out .= '<li>';
-    $out .= '<h4>CONCEPT DEVELOPMENT</h4>';
-    $out .= '<p>Giản đơn tạo nên xuất sắc. Khi thực hiện những tác phẩm mang vị thế tầm vóc của công ty như Print-Ad, Brochure, Profile, Annual Report, chắc chắn bạn sẽ muốn có một ý tưởng tốt để chuyển tải và thúc đẩy hiệu quả công việc nhanh nhất.</p>';
+    $out .= '<li class="inline-felx">';
+    $out .= '<h4>PRODUCTION</h4>';
+    $out .= '<p>Đón nhận những sản phẩm in ấn và sản xuất mỹ thuật luôn là điều hồi hộp thú vị. Nhưng để có được sự trầm trồ kinh ngạc cho những điều tuyệt mỹ, bạn cần được phục vụ bởi một đội ngũ kỹ thuật viên kinh nghiệm, chuyên nghiệp.</p>';
     $out .= '<a href="#">Xem Chi Tiết</a>';
     $out .= '</li>';
+    $out .= '<li class="inline-felx">';
+    $out .= '<h4>VIDEO PRODUCTION</h4>';
+    $out .= '<p>Chúng tôi có đầy đủ các dịch vụ để sản xuất một bộ phim, từ ý tưởng, viết kịch bản, ghi hình và hậu kỳ hoàn thiện sản phẩm . Chúng tôi sẽ làm cho doanh nghiệp nổi bật bằng cách sử dụng các thiết bị sản xuất tốt nhất, kỹ thuật hậu kỳ mới nhất.</p>';
+    $out .= '<a href="#">Xem Chi Tiết</a>';
+    $out .= '</li>';
+    $out .= '<a href="#">Yêu Cầu Dịch Vụ</a>';
     $out .= '</ul>';
     $out .= '</div>';
     $out .= '</div>';
     echo $out;
-} );
+}
 //Template Client 
 add_action( '3n_index', function() {
     $out  = '<div id="n_View_banner_client">';
