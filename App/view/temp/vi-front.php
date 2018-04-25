@@ -30,7 +30,7 @@ function n_View_index() {
         $out  .= '<div id="n_View_banner_header"></div>';
     }
     $out .= '<div id="n_View_banner_about">';
-    $out .= '<div class="n_View_container n_View_about flex">';
+    $out .= '<div class="n_View_container n_View_about flex title-size">';
     $out .= '<span class="n_View_Icon_About"></span>';
     $out .= '<h2>Giới Thiệu Về Chúng Tôi</h2>';
     $out .= '<h4>Tạo sự khác biệt cho thương hiệu của bạn</h4>';
@@ -48,7 +48,7 @@ function n_View_index() {
 // Service 
 function n_View_service() {
     $out  = '<div id="n_View_banner_service">';
-    $out .= '<div class="n_View_container n_View_service flex">';
+    $out .= '<div class="n_View_container n_View_service flex title-size">';
     $out .= '<div class="n_View_service_icon"></div>';
     $out .= '<ul class="grid">';
     $out .= '<h2>Dịch vụ <br/> chúng tôi</h2>';
@@ -92,16 +92,16 @@ function n_View_service() {
     $out .= '<p>Chúng tôi có đầy đủ các dịch vụ để sản xuất một bộ phim, từ ý tưởng, viết kịch bản, ghi hình và hậu kỳ hoàn thiện sản phẩm . Chúng tôi sẽ làm cho doanh nghiệp nổi bật bằng cách sử dụng các thiết bị sản xuất tốt nhất, kỹ thuật hậu kỳ mới nhất.</p>';
     $out .= '<a href="#">Xem Chi Tiết</a>';
     $out .= '</li>';
-    $out .= '<a href="#">Yêu Cầu Dịch Vụ</a>';
+    $out .= '<a class="yeucau" href="#">Yêu Cầu Dịch Vụ</a>';
     $out .= '</ul>';
     $out .= '</div>';
     $out .= '</div>';
     echo $out;
 }
 //Template Client 
-add_action( '3n_index', function() {
+function v_View_client() {
     $out  = '<div id="n_View_banner_client">';
-    $out .= '<div class="n_View_container">';
+    $out .= '<div class="n_View_container title-size">';
     $out .= '<h3 class="flex">Khách hàng <br/> chúng tôi</h2>';
     $out .= '<ul>';
     $out .= '<li><a href="#"><span class="client_1"></span></a></li>';
@@ -117,11 +117,11 @@ add_action( '3n_index', function() {
     $out .= '</div>';
     $out .= '</div>';
     echo $out;
-} );
+}
 // Quy Trinh
-add_action( '3n_index', function() {
+function n_View_qt() {
     $out  = '<div id="n_View_banner_qt">';
-    $out .= '<div class="n_View_container">';
+    $out .= '<div class="n_View_container title-size">';
     $out .= '<h3 class="flex">Quy Trình Của Chúng Tôi</h2>';
     $out .= '<div class="content flex">';
     $out .= '<div class="content_1 content_ flex">';
@@ -148,7 +148,7 @@ add_action( '3n_index', function() {
     $out .= '</div>';
     $out .= '</div>';
     echo $out;
-} );
+}
 // Template Footer 
 add_action('3n_footer', function() {
     global $n_View_template;

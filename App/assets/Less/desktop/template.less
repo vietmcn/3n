@@ -8,8 +8,8 @@
     }
     #n_View_logo {
         img {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
         }
     }
     .n-View-menu-header {
@@ -43,11 +43,17 @@
     }
 }
 //Cover
-#n_View_banner_header,#n_View_banner_about, #n_View_banner_qt, #n_View_banner_service {
+#n_View_banner_header,#n_View_banner_about, #n_View_banner_qt, #n_View_banner_service, #n_View_banner_header_contact {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     padding: 40px 0px;
+}
+// font-size TITLE
+.title-size {
+    h2,h3 {
+        font-size: 25px;
+    }
 }
 //Header
 #n_View_banner_header {
@@ -76,7 +82,6 @@
         }
         h2 {
             text-transform: uppercase;
-            font-size: 40px;
             color: #f40000;
             margin: 5rem 0px 35px;
         }
@@ -118,9 +123,14 @@
     background-repeat: no-repeat;
     @media only screen and ( max-width: 1024px ) {
         background-size: 68%;
+        background-position: -10px 60px;
     }
-    @media only screen and ( min-width: 1100px ) {
-        background-size: 70%;
+    @media ( min-width:1024px ) and ( max-width: 1199px )  {
+        background-position-y: 50px;
+    }
+    @media only screen and ( min-width: 1200px ) {
+        background-size: 72%;
+        background-position: -20px 20px;
     }
     .n_View_service {
         flex-direction: column;
@@ -128,17 +138,19 @@
         h2 {
             color: #e21e26;
             text-transform: uppercase;
-            font-size: 30px;
             margin-bottom: 4rem;
             padding: 0 25px;
             @media only screen and ( min-width: 1100px ) { 
-                margin-bottom: 8rem;
+                margin-bottom: 10rem;
+            }
+            @media ( min-width:1024px ) and ( max-width: 1199px )  {
+                margin-bottom: 7rem;
             }
         }
-        ul {
+        ul.grid {
             padding: 0px;
             margin: 0px;
-            width: 61%;
+            width: 60%;
             @media only screen and ( max-width: 1024px ) {
                 width: 60vw;
             }
@@ -177,6 +189,17 @@
                     bottom: -5px;
                 }
             }
+            a.yeucau {
+                text-decoration: none;
+                margin: 25px;
+                padding: 15px;
+                background: red;
+                color: #222;
+                font-weight: 700;
+                margin-top: 3rem;
+                display: inline-block;
+                border-radius: 50px;
+            }
         }
     }
 }
@@ -190,7 +213,6 @@
         margin: 2.5rem 0;
         justify-content: center;
         color: #e21e26;
-        font-size: 30px;
         text-transform: uppercase;
         line-height: 35px;
         font-weight: 700;
@@ -257,7 +279,6 @@
         justify-content: center;
         margin: 0;
         padding: 2.5rem 0 35px;
-        font-size: 30px;
         color: red;
         text-transform: uppercase;
     }
@@ -277,8 +298,8 @@
             }
             .icon {
                 background-size: cover;
-                height: 135px;
-                width: 135px;
+                height: 130px;
+                width: 130px;
                 display: block;
             }
             i.icontent_1 {
@@ -295,6 +316,11 @@
             }
         }
     }
+}
+// Contact
+#n_View_banner_header_contact {
+    background-image: url( '../img/banner-5.png' );
+    min-height: 35vw;
 }
 // Footer
 footer#footer {

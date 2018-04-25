@@ -4,6 +4,8 @@ add_action( '3n_header', 'n_View_header' );
 // Index
 add_action( '3n_index', 'n_View_index' );
 add_action( '3n_index', 'n_View_service' );
+add_action( '3n_index', 'v_View_client' );
+add_action( '3n_index', 'n_View_qt' );
 /**
  * 
  * @page
@@ -12,3 +14,5 @@ add_action( '3n_index', 'n_View_service' );
  * 
  */
 add_action( '3n_page', 'n_View_contact' );
+add_action( '3n_page', 'v_View_client' );
+add_action( '3n_page', 'n_View_qt' );
