@@ -24,7 +24,7 @@ function n_View_page() {
                         <p>For works, credentials, please feel free to get in touch, we‘d love to hear from you.</p>
                     </div>
                     <?php 
-                        echo do_shortcode('[contact-form-7 id="11" title="Form liên hệ 1"]');
+                        echo do_shortcode('[contact-form-7 id="13" title="Form liên hệ 1"]');
                     ?>
                 </div>
             </div>
@@ -40,6 +40,15 @@ function n_View_page() {
                     <div class="n_View_banner_crea"><img src="<?php echo get_template_directory_uri();?>/App/assets/img/banner-creati.png"/></div>
                     <div class="n_View_banner_video"><img src="<?php echo get_template_directory_uri();?>/App/assets/img/banner-video.png"/></div>
                     <div class="n_View_banner_digi"><img src="<?php echo get_template_directory_uri();?>/App/assets/img/banner-digi.png"/></div>
+                </div>
+            </div>
+        <?php
+    } elseif (is_page('project')) {
+        ?>
+            <div id="n_View_banner_header"></div>
+            <div id="n_View_project">
+                <div class="n_View_container flex">
+                    <div class="n_View_banner_project"><img src="<?php echo get_template_directory_uri();?>/App/assets/img/project.png"/></div>
                 </div>
             </div>
         <?php

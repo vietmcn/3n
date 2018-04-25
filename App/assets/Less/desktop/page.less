@@ -41,7 +41,7 @@
                 width: 155px;
                 left: 0;
                 display: block;
-                margin-top: 3.5rem;
+                margin-top: 2.5rem;
             }
         }
         .wpcf7 {
@@ -56,7 +56,7 @@
                     border-radius: 50px;
                     border: 2px solid rgb(34, 34, 34);
                     padding: 10px 15px;
-                    margin-bottom: 1rem;
+                    margin-bottom: 2rem;
                     width: 90%;
                 }
                 input[type="submit"] {
@@ -66,7 +66,7 @@
                     width: 150px;
                     color: rgb(255, 255, 255);
                     border: 0px;
-                    margin-top: 15px;
+                    margin-top: 3rem;
                 }
                 textarea {
                     overflow: auto;
@@ -99,15 +99,15 @@
         .n_View_banner_digi::after,.n_View_banner_digi::before {
             content: "";
             position: absolute;
-            right: -95px;
+            right: 50%;
             height: 100%;
-            width: 10%;
+            width: 100%;
             z-index: -2;
         }
         .n_View_banner_mobile::before,.n_View_banner_web::before,.n_View_banner_video::before,
         .n_View_banner_digi::before {
             right: auto;
-            left: -95px;
+            left: 50%;
         }
         .n_View_banner_mobile::after,.n_View_banner_mobile::before,
         .n_View_banner_digi::before,.n_View_banner_digi::after {
@@ -116,6 +116,14 @@
         .n_View_banner_web::after,.n_View_banner_web::before,
         .n_View_banner_video::before,.n_View_banner_video::after {
             background-color: rgb(251, 0, 24)
+        }
+    }
+}
+// project 
+#n_View_project {
+    .n_View_container {
+        img {
+            width: 100%;
         }
     }
 }
