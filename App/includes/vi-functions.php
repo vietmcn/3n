@@ -11,3 +11,5 @@
  * @since 1.0
  * @version 1.0
  */
+require_once 'Admin/vi-class-namecard.php';
+require_once 'Admin/vi-class-metabox.php';
