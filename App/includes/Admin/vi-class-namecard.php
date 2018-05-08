@@ -44,9 +44,6 @@ if ( !class_exists('n_Namecard') ) {
             );
             $rewrite = array(
                 'slug'                  => 'card',
-                'with_front'            => true,
-                'pages'                 => true,
-                'feeds'                 => true,
             );
             $args = array(
                 'label'                 => __( 'Name Card', 'text_domain' ),
@@ -63,7 +60,7 @@ if ( !class_exists('n_Namecard') ) {
                 'show_in_nav_menus'     => true,
                 'can_export'            => true,
                 'has_archive'           => true,
-                'exclude_from_search'   => false,
+                'exclude_from_search'   => true,
                 'publicly_queryable'    => true,
                 'rewrite'               => $rewrite,
                 'capability_type'       => 'post',
