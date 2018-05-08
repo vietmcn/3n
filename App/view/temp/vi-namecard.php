@@ -7,7 +7,9 @@ if ( !defined('ABSPATH') ) {
     ?>
         <div class="n-namecard">
             <header id="namecard-cover">
-                <?php echo $post->ID;?>
+            <figure>
+                <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+            </figure>
             </header>
         </div>
     <?php 
