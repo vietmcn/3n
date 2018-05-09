@@ -13,3 +13,5 @@
  */
 require_once 'Admin/vi-class-namecard.php';
 require_once 'Admin/vi-class-metabox.php';
+//
+require_once 'lib/vi-class-getmeta.php';
