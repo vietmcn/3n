@@ -11,6 +11,10 @@ if ( !defined('ABSPATH') ) {
             <figure>
                 <img src="https://i.imgur.com/SlFbGp1.png" />
             </figure>
+            <div class="phone-email flex">
+                <a href="tel:<?php $meta->get( $post->ID, '_meta_card', 'phone' );?>"><i class="3nicon-phone"></i></a>
+                <a href="mailto:<?php $meta->get( $post->ID, '_meta_card', 'email' ); ?>"><i class="3nicon-email"></i></a>
+            </div>
             </header>
             <section class="sec-namecard">
                 <div class="">

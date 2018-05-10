@@ -8,8 +8,9 @@ header[data-id="n_View_header"],#footer {
     header#namecard-cover {
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         background: #a97d50;
-        min-height: 220px;
+        min-height: 160px;
         figure {
             text-align: center;
             width: 100px;
@@ -18,14 +19,29 @@ header[data-id="n_View_header"],#footer {
                 width: 100%;
             }
         }
+        .phone-email {
+            width: 100%;
+            border-top: 1px solid #fff;
+            a {
+                width: 100/2%;
+                min-height: 50px;
+            }
+            a:last-child {
+                border-left: 1px solid #fff;
+            }
+        }
     }
     .sec-namecard {
-        padding: 0 15px;
+        padding: 0 25px;
         background: #f7f7f7;
         p {
             margin: 0px;
+            padding: 15px 0px 20px;
             span {
                 display: block;
+                color: #7b7b7b;
+                margin-top: 2px;
+                font-size: 13px;
             }
         }
     }
