@@ -30,7 +30,7 @@ if ( !class_exists('n_GetmetaBox') ) {
                             echo $value;
                         }
                         break;
-                    case 'nota':
+                    case 'desc':
                         if ( $key[1] == 'meta_mota' ) {
                             echo $value;
                         }

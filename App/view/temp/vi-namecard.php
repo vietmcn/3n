@@ -7,16 +7,16 @@ if ( !defined('ABSPATH') ) {
     $meta = new n_GetmetaBox;
     ?>
         <div class="n-namecard">
-            <header id="namecard-cover">
+            <header id="namecard-cover" class="flex">
             <figure>
                 <img src="https://i.imgur.com/SlFbGp1.png" />
             </figure>
             </header>
-            <section>
+            <section class="sec-namecard">
                 <div class="">
-                    <p class="desc"></p>
-                    <p class="phone"><?php $meta->get( $post->ID, '_meta_card', 'mobile' ); ?><span><i class="3nicon-mobile"></i>Mobile</span></p>
-                    <p class="phone"><?php $meta->get( $post->ID, '_meta_card', 'phone' ); ?><span>Telephone</span></p>
+                    <p class="desc"><?php $meta->get( $post->ID, '_meta_card', 'desc' ); ?></p>
+                    <p class="phone"><?php $meta->get( $post->ID, '_meta_card', 'phone' ); ?><span><i class="3nicon-mobile"></i>Mobile</span></p>
+                    <p class="phone"><?php $meta->get( $post->ID, '_meta_card', 'homephone' ); ?><span>Telephone</span></p>
                     <p class="phone"><?php $meta->get( $post->ID, '_meta_card', 'fax' ); ?><span>Fax</span></p>
                     <p class="phone"><?php $meta->get( $post->ID, '_meta_card', 'email' ); ?><span><i class="3nicon-email"></i>Email</span></p>
                     <p class="phone"><?php $meta->get( $post->ID, '_meta_card', 'chuvu' ); ?><span><i class="3nicon-cty"></i>Giám Đốc</span></p>
@@ -38,3 +38,9 @@ if ( !defined('ABSPATH') ) {
         </div>
     <?php 
 }
+
+add_action( 'wp_enqueue_scripts', function() {
+    if ( is_singular( 'namecard' ) ) {
+        wp_enqueue_style( 'name-card', get_template_directory_uri().'/App/assets/css/namecard.min.css', '', 'all' );
+    }
+} );
